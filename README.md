@@ -111,17 +111,17 @@ npm run build
 
 ## Example Project
 
--[小心你的步伐3D](https://github.com/cocos/cocos-tutorial-mind-your-step):初学者一步一步的教程项目回购。
--[测试用例](https://github.com/cocos/cocos-test-projects):每个引擎模块的单元测试场景。
--[示例案例](https://github.com/cocos/cocos-example-projects):简单而富有表现力的演示场景，用于基线测试和特定主题的案例研究。
+- [小心你的步伐3D](https://github.com/cocos/cocos-tutorial-mind-your-step):初学者一步一步的教程项目回购。
+- [测试用例](https://github.com/cocos/cocos-test-projects):每个引擎模块的单元测试场景。
+- [示例案例](https://github.com/cocos/cocos-example-projects):简单而富有表现力的演示场景，用于基线测试和特定主题的案例研究。
 - [Awesome Cocos](https://github.com/cocos/awesome-cocos):你可以在这里找到其他有用的工具和展示案例。
 
 ## Links
 
-——(官方网站)(https://www.cocos.com/)
--[下载](https://www.cocos.com/en/creator/download)
-——(文档)(https://docs.cocos.com/creator/manual/en/)
-——(API参考)(https://docs.cocos.com/creator/api/en/)
--[项目和路线图](https://github.com/orgs/cocos/projects?query=is%3Aopen&type=new)
-——(论坛)(https://discuss.cocos2d-x.org/c/creator)
+- (官方网站)(https://www.cocos.com/)
+- [下载](https://www.cocos.com/en/creator/download)
+- (文档)(https://docs.cocos.com/creator/manual/en/)
+- (API参考)(https://docs.cocos.com/creator/api/en/)
+- [项目和路线图](https://github.com/orgs/cocos/projects?query=is%3Aopen&type=new)
+- (论坛)(https://discuss.cocos2d-x.org/c/creator)
 - Discord社区:在Discord的发现面板中搜索Cocos。
