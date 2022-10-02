@@ -29,30 +29,30 @@
 
 # Engine for Cocos Creator
 
-**Cocos Creator is the new generation of game development tool in Cocos family, it brings a complete set of 3D and 2D features while providing an intuitive, low cost and collaboration friendly workflow to game developers.** Cocos Engine is the runtime framework for Cocos Creator editor.
+**Cocos Creator是Cocos家族中的新一代游戏开发工具，它带来了一套完整的3D和2D功能，同时为游戏开发者提供了一个直观、低成本和协作友好的工作流程。** Cocos Engine是Cocos Creator编辑器的运行时框架。
 
 ![image](https://www.cocos.com/wp-content/uploads/2022/08/13f41f1c975e8255fdc06f59597b9546-7.png)
 
-Cocos Creator inherited many good qualities and cool features from its previous versions, such as high performance low level C++ implementation, intuitive editor, cross-platform support. It supports native platforms, web platforms and rapidly expanding instant gaming platforms, including Windows, Mac, iOS, Android, HarmonyOS, Web, Facebook Instant Games, WeChat Mini Game and TikTok Mini Games.
+Cocos Creator继承了以前版本的许多优秀品质和很酷的功能，例如高性能的低级别c++实现，直观的编辑器，跨平台支持。它支持本地平台，网页平台和快速扩展的即时游戏平台，包括Windows, Mac, iOS, Android, HarmonyOS, web, Facebook即时游戏，微信迷你游戏和TikTok迷你游戏。
 
-Furthermore, Cocos Creator has pushed the engine technology to a whole new level for high performance with scalability on various platforms, full extensibility and easy development.
+此外，Cocos Creator将引擎技术推到了一个全新的水平，实现了在各种平台上的高性能可扩展性、完全可扩展性和易于开发。
 
-1. **Modern Graphics**: The GFX implementation is designed to adapt to the modern graphics APIs, it uses Vulkan on Windows and Android, Metal on Mac OS and iOS, WebGL on Web platform.
-2. **High Performance**: The runtime engine is built with half C++ and half TypeScript, low level infrastructure, native platform adaptation, renderer and scene management are all written in C++ to ensure high runtime performance. We continue to move heavy lifting work to native as much as possible.
-3. **Customizable Render Pipeline**: The render pipeline is designed to be fully customizable, it has supported the builtin forward and deferred render pipeline across all platforms. Developers can customize their own render pipeline following the same approach.
-4. **Extensible Surface Shader**: The material system is built on Cocos effect format which uses GLSL 300, the shader programs will be converted to suitable runtime format automatically. The surface shader permit to fully customize the surface material while ensuring universal lighting model.
-5. **Physically Based Rendering (PBR)**: The standard effect adopts physically based rendering, along with the physically based camera and the lighting based on physical metrics, developers can easily achieve realistic and seamless rendering results across different environment.
-6. **Easy TypeScript API**: The user level API set is provided in TypeScript, along with the powerful VSCode editor, development with Cocos Creator is incredibly efficient.
-
-Besides all these highlights, Cocos Creator also provides builtin animation system, physics system, particle system, terrain editing support, complex UI system, instant preview etc.
+1. **现代图形**:GFX实现是设计来适应现代图形api，它使用Vulkan在Windows和Android，金属在Mac OS和iOS, WebGL在Web平台。
+2. **高性能**:运行时引擎用一半c++一半TypeScript构建，底层基础设施、本机平台适配、渲染器和场景管理都用c++编写，以确保高运行时性能。我们继续尽可能多地将繁重的起重工作转移到本地。
+3.**可定制的渲染管道**:渲染管道被设计成完全可定制的，它支持跨所有平台的内置前向和延迟渲染管道。开发人员可以按照相同的方法定制自己的渲染管道。
+4. **可扩展表面着色**:材质系统是建立在Cocos效果格式使用GLSL 300，着色程序将自动转换为合适的运行时格式。表面着色器允许完全定制表面材料，同时确保通用照明模型。
+5. **基于物理的渲染(physical Based Rendering, PBR)**:标准效果采用基于物理的渲染，配合基于物理的相机和基于物理指标的照明，开发人员可以轻松实现跨不同环境的逼真和无缝渲染结果。
+6. **简单的TypeScript API**: TypeScript中提供了用户级API集，以及强大的VSCode编辑器，使用Cocos Creator进行开发是非常高效的。
+除了所有这些亮点，Cocos Creator还提供内置动画系统，物理系统，粒子系统，地形编辑支持，复杂的UI系统，即时预览等。
 
 ![image](https://user-images.githubusercontent.com/1503156/111037166-f27c7600-845d-11eb-988f-4c2c8b5c7321.png)
 
-This open source repository is the runtime engine of Cocos Creator, the engine is naturally integrated within Cocos Creator, designed to only be the essential runtime library and not to be used independently.
+这个开源存储库是Cocos Creator的运行时引擎，这个引擎自然集成在Cocos Creator中，被设计成只作为基本的运行时库，而不能独立使用。
 
 ## Development and Contribution Notice
 
-Cocos Creator engine is open source and welcomes community participation, for open source engine development with Cocos Creator editor, you should fork this repository and setup [custom engine](https://docs.cocos.com/creator/manual/en/advanced-topics/engine-customization.html) in the editor.
+Cocos Creator引擎是开源的，欢迎社区参与，对于使用Cocos Creator编辑器进行开源引擎开发，您应该在编辑器中分叉这个存储库并设置
+[定制引擎](https://docs.cocos.com/creator/manual/en/advanced-topics/engine-customization.html)。
 
 ### Prerequisite
 
@@ -61,64 +61,67 @@ Cocos Creator engine is open source and welcomes community participation, for op
 
 ### Clone
 
-Clone this repository into your local environment.
+将此存储库克隆到您的本地环境中。
 
 ### Install
 
-In the cloned engine folder, run the following command to setup development environment:
+在克隆的引擎文件夹中，运行如下命令建立开发环境:
 
 ```bash
 # download & build engine dependencies
 npm install
 ```
 
-This is all you have to do to setup engine development environment.
+这就是设置引擎开发环境所需要做的一切。
 
 ### Build
 
-- If running inside Cocos Creator, the engine will automatically compile and build after the editor window is opened. For more instructions on modifying the engine in Cocos Creator, please refer to [Engine Customization Workflow](https://docs.cocos.com/creator/manual/en/advanced-topics/engine-customization.html).
-- Outside the editor, you need to run the following command to build:
+- 如果运行在Cocos Creator内，引擎将在编辑器窗口打开后自动编译和构建。关于在Cocos Creator中修改引擎的更多说明，请参考[引擎定制工作流](https://docs.cocos.com/creator/manual/en/advanced-topics/engine-customization.html)。
+- 在编辑器外，需要运行以下命令进行编译:
 
 ```bash
 npm run build
 ```
 
-Please refer to [native readme](native/README.md) if you want to develop native applications.
+如果您想开发本机应用程序，请参考[native readme](native/ readme .md)。
 
 ### Contribution
 
-You can contribute to the Cocos Creator open source engine in many ways, they are very much appreciated:
+您可以通过多种方式为Cocos Creator开源引擎做出贡献，非常感谢:
 
-1. Report bug or feature requests by [creating an issue](https://github.com/cocos/cocos-engine/issues/new/choose).
-2. Participate discussions in the [issues](https://github.com/cocos/cocos-engine/issues/).
-3. Create a pull request if you have fixed or improved anything, implemented any features.
-4. Improve the documentations with pull request to the [usage documentation repository](https://github.com/cocos/cocos-docs).
-5. Help other developers in our [Forum](https://discuss.cocos2d-x.org/c/creator).
+1. 通过[创建问题](https://github.com/cocos/cocos-engine/issues/new/choose)报告bug或特性请求。
+2. 参与[议题]的讨论(https://github.com/cocos/cocos-engine/issues/)。
+3.如果你修复或改进了任何东西，实现了任何功能，就创建一个pull request。
+4. 通过对[使用文档存储库](https://github.com/cocos/cocos-docs)的拉请求来改进文档。
+5. 在我们的[论坛](https://discuss.cocos2d-x.org/c/creator)中帮助其他开发者。
 
 ### Contribution notice
 
-If you are trying to make a pull request, there are some requirements that must be met so that your pull request can be accepted:
+如果你试图发出一个pull request，有一些要求必须满足，这样你的pull request才能被接受:
 
-1. Follow our [Cpp Coding Style Guide](./docs/CPP_CODING_STYLE.md) and [TypeScript Coding Style Reference](./docs/TS_CODING_STYLE.md).
-2. Try to integrate ESLint and [CPP auto fix tools](./docs/CPP_LINTER_AUTOFIX_GUIDE.md) in your coding environment.
-3. Link related issues or discussions in your pull request and clearly state the purpose of your pull request.
-4. Pass all automatic continuous integration tests.
-5. Request file owner or engine developers to review your pull request.
-6. Get one valid approval from the engine architects.
+1. 遵循我们的[Cpp编码风格指南](./docs/CPP_CODING_STYLE.md)和[TypeScript编码风格参考](./docs/TS_CODING_STYLE.md)。
+
+2. 尝试在你的编码环境中集成ESLint和[CPP自动修复工具](./docs/CPP_LINTER_AUTOFIX_GUIDE.md)。
+
+3.在你的拉请求中链接相关的问题或讨论，并清楚地说明你的拉请求的目的。
+
+4. 通过所有自动持续集成测试。
+
+5. 请求文件所有者或引擎开发人员检查您的pull请求。
 
 ## Example Project
 
-- [Mind Your Step 3D](https://github.com/cocos/cocos-tutorial-mind-your-step): Beginner's step-by-step tutorial project repo.
-- [Test Cases](https://github.com/cocos/cocos-test-projects): Unit test scenes for every engine module.
-- [Example Cases](https://github.com/cocos/cocos-example-projects): Simple yet expressive demo scenes for baseline testing and topic-specific case study.
-- [Awesome Cocos](https://github.com/cocos/awesome-cocos): You can find out other useful tools and show cases here.
+-[小心你的步伐3D](https://github.com/cocos/cocos-tutorial-mind-your-step):初学者一步一步的教程项目回购。
+-[测试用例](https://github.com/cocos/cocos-test-projects):每个引擎模块的单元测试场景。
+-[示例案例](https://github.com/cocos/cocos-example-projects):简单而富有表现力的演示场景，用于基线测试和特定主题的案例研究。
+- [Awesome Cocos](https://github.com/cocos/awesome-cocos):你可以在这里找到其他有用的工具和展示案例。
 
 ## Links
 
-- [Official site](https://www.cocos.com/)
-- [Download](https://www.cocos.com/en/creator/download)
-- [Documentation](https://docs.cocos.com/creator/manual/en/)
-- [API References](https://docs.cocos.com/creator/api/en/)
-- [Projects and road map](https://github.com/orgs/cocos/projects?query=is%3Aopen&type=new)
-- [Forum](https://discuss.cocos2d-x.org/c/creator)
-- Discord community: Search for Cocos in the Discover panel of Discord.
+——(官方网站)(https://www.cocos.com/)
+-[下载](https://www.cocos.com/en/creator/download)
+——(文档)(https://docs.cocos.com/creator/manual/en/)
+——(API参考)(https://docs.cocos.com/creator/api/en/)
+-[项目和路线图](https://github.com/orgs/cocos/projects?query=is%3Aopen&type=new)
+——(论坛)(https://discuss.cocos2d-x.org/c/creator)
+- Discord社区:在Discord的发现面板中搜索Cocos。
